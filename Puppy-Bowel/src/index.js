@@ -1,33 +1,5 @@
 import {createRoot} from 'react-dom/client'
 import react, {useState, useEffect} from "react" 
-import { createBrowserRouter, RouterProvider } from "react-router-dom"; 
-import Homepage from "./Components/Homepage";
-import Settings from "./Components/Settings"
-import Puppies from "./Components/Puppies"
-import About from "./Components/About"
-
-const router = createBrowserRouter ([
-    {
-        path: "/", 
-        element: <Homepage />,
-
-        children: [ 
-            {
-                path: "./Settings", 
-                element: <Settings /> 
-            },
-            {
-                path: "./About", 
-                element: <About/>
-            }, 
-            {
-                path:"./Puppies",
-                element:<Puppies/>
-            }
-        ]
-    }
-])
-
 
 const appElement = document.getElementById("app")
 
@@ -58,6 +30,7 @@ const Component = () => {
     
     //Step 3: rendering the state data for our users to see 
     return (
+  
     <div>
         <h1>Puppy Bowel</h1>
         <div>
@@ -66,7 +39,7 @@ const Component = () => {
                     return <div key = {idx}>
                         <p>Name of player: {puppy.name}</p>
                         <p>Player Breed: {puppy.breed}</p>
-                        <img src = {puppy.imageUrl}></img>
+                        <img className = "image" src = {puppy.imageUrl}></img>
                     </div>
                 })
             }

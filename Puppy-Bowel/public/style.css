@@ -1,0 +1,23 @@
+html {
+    font-family: 'Silkscreen', cursive;
+    font-size: 20px;
+    background-color: burlywood;
+    flex-wrap: wrap;
+}
+
+.image{
+    width: auto;
+    height: 400px;
+    display: flex;
+    margin: auto;
+} 
+h1 {
+   text-align: center;
+}
+p{
+   text-align: center;
+}
+img{
+    border-radius: 10px;
+    border: 2px solid black;
+}
